@@ -1,0 +1,17 @@
+kind: Deployment
+apiVersion: extensions/v1beta1
+metadata:
+  name: newdeploy
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: hellonodekubectl
+    spec:
+      hostNetwork: false
+      containers:
+      - name: hellonodekubectl
+        image: docker.io/jxadro/hellonode:4.0
+        imagePullPolicy: IfNotPresent
+        ports: []
