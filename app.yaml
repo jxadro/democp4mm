@@ -67,8 +67,8 @@ spec:
       group: app.ibm.com
     local: false    
   packageFilter:
-    path: mcm-guestbook
-      
+    filterRef:
+      name: guestbook-frontal-filter-configmap 
 ---
 
 apiVersion: app.ibm.com/v1alpha1
@@ -98,4 +98,29 @@ spec:
       group: app.ibm.com
     local: false    
   packageFilter:
+    filterRef:
+      name: guestbook-redis-filter-configmap
+---
+
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: guestbook-frontal-filter-configmap
+  namespace: mcm-apps
+  labels: 
+    release: gbapp
+data:
+    path: mcm-guestbook
+    
+    
+---
+
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: guestbook-redis-filter-configmap
+  namespace: mcm-apps
+  labels: 
+    release: gbapp
+data:
     path: mcm-guestbook-redis
