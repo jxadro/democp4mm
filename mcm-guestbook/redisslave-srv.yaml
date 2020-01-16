@@ -2,7 +2,6 @@ kind: Service
 apiVersion: v1
 metadata:
   name: redisslave-srv
-  namespace: mcm-guestbook
 spec:
   type: ClusterIP
   ports:
