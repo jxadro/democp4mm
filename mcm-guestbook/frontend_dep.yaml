@@ -1,8 +1,7 @@
 kind: Deployment
 apiVersion: apps/v1
 metadata:
-  name: frontend-dep
-  namespace: mcm-guestbook
+  name: frontend-dep  
 spec:
   selector:
     matchLabels:
