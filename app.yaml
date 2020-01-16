@@ -124,3 +124,6 @@ metadata:
     release: gbapp
 data:
     path: mcm-guestbook-redis
+
+---
+
