@@ -1,0 +1,15 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: redismaster-srv
+  namespace: mcm-guestbook-redis
+spec:
+  type: ClusterIP
+  ports:
+    - port: 6379
+  selector:
+    app: gbchn
+    release: gbchn
+    role: master
+    tier: backend
+
