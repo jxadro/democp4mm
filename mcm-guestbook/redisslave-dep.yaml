@@ -2,7 +2,6 @@ kind: Deployment
 apiVersion: apps/v1
 metadata:
   name: redisslave-dep
-  namespace: mcm-guestbook
 spec:
   selector:
     matchLabels:
